@@ -126,20 +126,27 @@ h1, h2 {
     }
     
     .favo {
-      color: #808080;
-      width:35px;
-      height: 30px;
-      margin-left: 20px;
-    }
-    
-    .unfavo {
-      color: #e54747;
       width:35px;
       height: 30px;
       margin-left: 20px; 
+      
+    }
+    
+    .unfavo {
+      width:35px;
+      height: 30px;
+      margin-left: 20px; 
+      filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
     }
   }
 }
+    
+     
+      
+      
+      
+    
+      
 
 .btn-black {
   color: #565656;
