@@ -1,5 +1,6 @@
 module ApplicationHelper
   def current_user
+    #find_byとは検索するメソッド
     @current_user ||= User.find_by(id: session[:user_id])
   end
   
