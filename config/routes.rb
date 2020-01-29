@@ -18,12 +18,14 @@ Rails.application.routes.draw do
   post '/favorites', to: 'favorites#create'
   delete '/favorites', to: 'favorites#destroy'
   
-  get 'comments/new', to:'comments#new'
+  get 'comments/new'
   post '/comments', to: 'comments#create'
   
+  #resources :topics do
+    #resources :comments, only: [:new, :create]
+  #end
+  
 end
-  
-  
   
 
 

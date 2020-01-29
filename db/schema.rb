@@ -10,16 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_002416) do
+ActiveRecord::Schema.define(version: 2020_01_23_042617) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "content"
-    t.bigint "user_id"
-    t.bigint "topic_id"
+    t.integer "user_id"
+    t.integer "topic_id"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["topic_id"], name: "index_comments_on_topic_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -45,6 +43,4 @@ ActiveRecord::Schema.define(version: 2020_01_16_002416) do
     t.string "password_digest"
   end
 
-  add_foreign_key "comments", "topics"
-  add_foreign_key "comments", "users"
 end
